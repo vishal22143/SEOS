@@ -2,9 +2,8 @@ from modules.knowledge.requirement import Requirement
 from modules.knowledge.requirement_manager import RequirementManager
 
 
-def test_requirement_database():
-
-    manager = RequirementManager()
+def test_requirement_database(tmp_path):
+    manager = RequirementManager(tmp_path / "seos.db")
 
     manager.initialize()
 
@@ -13,7 +12,7 @@ def test_requirement_database():
         "Front Loader Lift Capacity",
         "Loader shall lift 750 kg",
         "HIGH",
-        "OPEN"
+        "OPEN",
     )
 
     manager.add_requirement(req)
