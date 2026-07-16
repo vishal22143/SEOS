@@ -11,3 +11,4 @@ build/
 
 output/
 logs/
+.pytest_cache/
