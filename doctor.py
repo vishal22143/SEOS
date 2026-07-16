@@ -1,13 +1,8 @@
-"""
-SEOS Doctor Tool
-"""
+"""SEOS Doctor Tool."""
 
 from core.config import CONFIG
-from core.database import Database
+from core.database import Database, EXPECTED_TABLES
 from core.kernel import Kernel, KernelState
-
-
-EXPECTED_TABLES = {"materials", "requirements"}
 
 
 class Doctor:
@@ -26,18 +21,17 @@ class Doctor:
 
         try:
             database = Database(CONFIG["database"])
-            tables = set(database.table_names())
-            missing = EXPECTED_TABLES - tables
+            missing = EXPECTED_TABLES - set(database.table_names())
 
             if missing:
                 self.fail_check(
                     "database_schema",
-                    "Missing tables: " + ", ".join(sorted(missing))
+                    "Missing tables: " + ", ".join(sorted(missing)),
                 )
             else:
                 self.pass_check(
                     "database_schema",
-                    "Required tables are present."
+                    "Required tables are present.",
                 )
 
         except Exception as error:
@@ -59,6 +53,15 @@ class Doctor:
                 self.fail_check("kernel_start", "Kernel did not reach RUNNING state.")
 
             diagnostics = kernel.diagnostics()
+
+            if diagnostics["failed_modules"]:
+                self.fail_check(
+                    "module_load",
+                    "Failed modules: " + ", ".join(diagnostics["failed_modules"]),
+                )
+            else:
+                self.pass_check("module_load", "All registered modules loaded.")
+
             self.pass_check("kernel_diagnostics", str(diagnostics))
 
         except Exception as error:
@@ -68,6 +71,7 @@ class Doctor:
             kernel.shutdown()
 
     def run(self):
+        self.results = []
         self.check_database()
         self.check_kernel()
         return self.results
