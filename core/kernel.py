@@ -52,6 +52,10 @@ class Kernel:
 
         self.module_manager.shutdown_all()
 
+        if self.database:
+            self.database.close()
+            self.database = None
+
         self.state = KernelState.STOPPED
 
         logger.info("SEOS Stopped.")
