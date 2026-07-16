@@ -2,9 +2,8 @@ from modules.engineering.material import Material
 from modules.engineering.material_manager import MaterialManager
 
 
-def test_material_database():
-
-    manager = MaterialManager()
+def test_material_database(tmp_path):
+    manager = MaterialManager(tmp_path / "seos.db")
 
     manager.initialize()
 
