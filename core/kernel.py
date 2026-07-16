@@ -45,7 +45,7 @@ class Kernel:
 
     def shutdown(self):
 
-        if self.state != KernelState.RUNNING:
+        if self.state == KernelState.STOPPED:
             return
 
         self.state = KernelState.STOPPING
