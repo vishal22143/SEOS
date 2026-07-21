@@ -1,0 +1,20 @@
+* 653a91f (HEAD -> feature/seos-v1) Checkpoint before SEOS Alpha build
+* 32a2691 Merge Codex improvements
+* 4238091 (origin/feature/seos-v1) test(core): cover doctor health checks
+* 9e64da9 test(core): cover kernel lifecycle diagnostics
+* 1798250 test(core): cover module manager diagnostics
+* af46016 test(core): cover database schema initialization
+* b266f94 test(knowledge): isolate requirement database tests
+* a593aee test(engineering): isolate material database tests
+* 22bf596 feat(core): strengthen doctor checks
+* 5a3b8f9 feat(core): expand kernel diagnostics
+* 6e421e2 feat(core): add module registry diagnostics
+* a64e542 refactor(knowledge): use shared database schema
+* 6b82615 refactor(engineering): use shared database schema
+* a1ea7b1 feat(core): centralize database schema
+* 5759fad fix(kernel): make shutdown cleanup resilient
+* 16c04b7 feat(tools): add SEOS doctor health check
+* dcef115 fix(kernel): close database on shutdown
+* ad4fa6a feat(database): initialize SEOS schema
+* 04d14a2 (origin/main, origin/HEAD, main) chore: ignore pytest cache
+* d139b4e fix(repo): remove accidental nested repository

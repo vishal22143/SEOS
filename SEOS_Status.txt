@@ -1,0 +1,32 @@
+On branch feature/seos-v1
+Your branch is ahead of 'origin/feature/seos-v1' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   SEOS_ProjectTree.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	SEOS_GitHistory.txt
+	SEOS_Status.txt
+	modules/engineering/bearings/
+	modules/engineering/chains/
+	modules/engineering/data/
+	modules/engineering/fasteners/
+	modules/engineering/gears/
+	modules/engineering/hydraulics/
+	modules/engineering/material_database.py
+	modules/engineering/shafts/
+	modules/engineering/steel/
+	modules/engineering/vendors/
+	modules/machines/kubota/
+	modules/standards/
+	tests/test_bearings.py
+	tests/test_fasteners.py
+	tests/test_hydraulics.py
+	tests/test_machine.py
+	tests/test_material_database.py
+
+no changes added to commit (use "git add" and/or "git commit -a")

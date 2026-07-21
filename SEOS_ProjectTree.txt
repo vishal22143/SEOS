@@ -1,6 +1,6 @@
 Folder PATH listing
 Volume serial number is 3E1B-148A
-C:\SEOS
+C:.
 ¦   .gitignore
 ¦   doctor.py
 ¦   pyproject.toml
@@ -11,6 +11,7 @@ C:\SEOS
 ¦   SEOS_ProjectTree.txt
 ¦   
 +---.pytest_cache
++---.pytest_tmp
 +---.venv
 ¦   ¦   pyvenv.cfg
 ¦   ¦   
@@ -1186,12 +1187,53 @@ C:\SEOS
 ¦   ¦   ¦   force.py
 ¦   ¦   ¦   hydraulic_cylinder.py
 ¦   ¦   ¦   material.py
+¦   ¦   ¦   material_database.py
 ¦   ¦   ¦   material_manager.py
 ¦   ¦   ¦   pressure.py
 ¦   ¦   ¦   stress.py
 ¦   ¦   ¦   units.py
 ¦   ¦   ¦   __init__.py
 ¦   ¦   ¦   
+¦   ¦   +---bearings
+¦   ¦   ¦       bearing.py
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---chains
+¦   ¦   ¦       chain.py
+¦   ¦   ¦       sprocket.py
+¦   ¦   ¦       
+¦   ¦   +---data
+¦   ¦   ¦       bearing_data.py
+¦   ¦   ¦       fastener_data.py
+¦   ¦   ¦       hydraulic_data.py
+¦   ¦   ¦       material_data.py
+¦   ¦   ¦       steel_section_data.py
+¦   ¦   ¦       
+¦   ¦   +---fasteners
+¦   ¦   ¦       bolt.py
+¦   ¦   ¦       nut.py
+¦   ¦   ¦       thread.py
+¦   ¦   ¦       washer.py
+¦   ¦   ¦       __init__.py
+¦   ¦   ¦       
+¦   ¦   +---gears
+¦   ¦   ¦       gear.py
+¦   ¦   ¦       
+¦   ¦   +---hydraulics
+¦   ¦   ¦       fitting.py
+¦   ¦   ¦       hose.py
+¦   ¦   ¦       pump.py
+¦   ¦   ¦       valve.py
+¦   ¦   ¦       
+¦   ¦   +---shafts
+¦   ¦   ¦       shaft.py
+¦   ¦   ¦       
+¦   ¦   +---steel
+¦   ¦   ¦       section.py
+¦   ¦   ¦       
+¦   ¦   +---vendors
+¦   ¦   ¦       vendor.py
+¦   ¦   ¦       
 ¦   ¦   +---__pycache__
 ¦   ¦           force.cpython-312.pyc
 ¦   ¦           hydraulic_cylinder.cpython-312.pyc
@@ -1219,8 +1261,21 @@ C:\SEOS
 ¦   ¦           __init__.cpython-312.pyc
 ¦   ¦           
 ¦   +---machines
-¦   ¦       __init__.py
-¦   ¦       
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---kubota
+¦   ¦       +---b2441n
+¦   ¦               chassis.py
+¦   ¦               dimensions.py
+¦   ¦               engine.py
+¦   ¦               front_axle.py
+¦   ¦               hydraulics.py
+¦   ¦               machine.py
+¦   ¦               pto.py
+¦   ¦               rear_axle.py
+¦   ¦               steering.py
+¦   ¦               transmission.py
+¦   ¦               
 ¦   +---manufacturing
 ¦   ¦   ¦   __init__.py
 ¦   ¦   ¦   
@@ -1233,15 +1288,44 @@ C:\SEOS
 ¦   ¦   +---__pycache__
 ¦   ¦           __init__.cpython-312.pyc
 ¦   ¦           
+¦   +---standards
+¦   ¦       ansi.py
+¦   ¦       bearing.py
+¦   ¦       din.py
+¦   ¦       is.py
+¦   ¦       iso.py
+¦   ¦       __init__.py
+¦   ¦       
 ¦   +---__pycache__
 ¦           __init__.cpython-312.pyc
 ¦           
 +---scripts
++---SEOS.pytest_tmp
+¦   +---test_database_initializes_requ0
+¦   ¦       seos.db
+¦   ¦       
+¦   +---test_doctor_reports_healthy_co0
+¦   ¦       seos.db
+¦   ¦       
+¦   +---test_kernel_startup_and_shutdo0
+¦   ¦       seos.db
+¦   ¦       
+¦   +---test_material_database0
+¦   ¦       seos.db
+¦   ¦       
+¦   +---test_requirement_database0
+¦           seos.db
+¦           
 +---tests
+¦   ¦   test_bearings.py
 ¦   ¦   test_database.py
 ¦   ¦   test_doctor.py
+¦   ¦   test_fasteners.py
 ¦   ¦   test_force.py
+¦   ¦   test_hydraulics.py
 ¦   ¦   test_kernel.py
+¦   ¦   test_machine.py
+¦   ¦   test_material_database.py
 ¦   ¦   test_material_manager.py
 ¦   ¦   test_module_manager.py
 ¦   ¦   test_pressure.py
