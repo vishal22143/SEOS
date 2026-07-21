@@ -1,4 +1,26 @@
-.pytest_tmp/
-.pytest_cache/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+
+# Pytest
+.pytest_cache/
+.pytest_tmp/
+SEOS.pytest_tmp/
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Virtual Environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
