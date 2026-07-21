@@ -1,0 +1,12 @@
+{
+    "build":"036",
+    "module":"Center Of Gravity Engine",
+    "version":"1.0",
+    "status":"Completed",
+    "features":[
+        "Mass Model",
+        "Center Of Gravity",
+        "Axle Load",
+        "Stability Factor"
+    ]
+}

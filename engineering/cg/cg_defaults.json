@@ -1,0 +1,8 @@
+{
+    "wheelbase_m":1.56,
+    "track_width_m":1.18,
+    "tractor_mass_kg":650,
+    "operator_mass_kg":75,
+    "fuel_mass_kg":25,
+    "default_coordinate_system":"ISO"
+}
