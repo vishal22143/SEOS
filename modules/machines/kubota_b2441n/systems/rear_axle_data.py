@@ -10,6 +10,6 @@ REAR_AXLE={
 
 "max_load_kg":1600,
 
-"pto_supported":$true
+"pto_supported":True
 
 }
