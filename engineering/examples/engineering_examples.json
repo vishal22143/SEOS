@@ -1,0 +1,16 @@
+{
+  "backhoe_standard":{
+    "pressure_bar":180,
+    "flow_lpm":28,
+    "boom_cylinder_bore_mm":63,
+    "bucket_cylinder_bore_mm":50,
+    "stroke_mm":500
+  },
+
+  "loader_standard":{
+    "pressure_bar":180,
+    "flow_lpm":32,
+    "lift_bore_mm":63,
+    "bucket_bore_mm":50
+  }
+}

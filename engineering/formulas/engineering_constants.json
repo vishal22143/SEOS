@@ -1,0 +1,8 @@
+{
+  "gravity":9.81,
+  "steel_density":7850,
+  "aluminium_density":2700,
+  "hydraulic_efficiency":0.90,
+  "default_pressure_bar":180,
+  "default_relief_bar":200
+}
