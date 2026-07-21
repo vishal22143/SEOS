@@ -1,0 +1,10 @@
+{
+    "version":"1.0",
+    "materials":[
+        {"code":"MS101","name":"Mild Steel IS2062","density":7850},
+        {"code":"EN8","name":"EN8 Steel","density":7850},
+        {"code":"EN24","name":"EN24 Alloy Steel","density":7850},
+        {"code":"SS304","name":"Stainless Steel 304","density":8000},
+        {"code":"CI25","name":"Cast Iron FG250","density":7200}
+    ]
+}

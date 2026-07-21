@@ -1,0 +1,41 @@
+{
+
+ "assemblies":[
+
+  "Main Frame",
+
+  "Swing Frame",
+
+  "Boom",
+
+  "Dipper",
+
+  "Bucket",
+
+  "Bucket Link",
+
+  "Boom Cylinder",
+
+  "Dipper Cylinder",
+
+  "Bucket Cylinder",
+
+  "Swing Cylinder",
+
+  "Left Stabilizer",
+
+  "Right Stabilizer",
+
+  "Valve Block",
+
+  "Hydraulic Hoses",
+
+  "Pins",
+
+  "Bushings",
+
+  "Bearings"
+
+ ]
+
+}

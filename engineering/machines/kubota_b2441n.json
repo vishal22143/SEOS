@@ -1,0 +1,33 @@
+{
+    "machine":"Kubota B2441N",
+    "manufacturer":"Kubota",
+    "power_hp":24,
+    "model":"B2441N",
+
+    "assemblies":[
+
+        "Frame",
+        "Engine",
+        "Clutch",
+        "Transmission",
+        "Front Axle",
+        "Rear Axle",
+        "PTO",
+        "Hydraulic Pump",
+        "Hydraulic System",
+        "Steering",
+        "Brake",
+        "Fuel System",
+        "Cooling System",
+        "Electrical System",
+        "3 Point Hitch",
+        "Operator Platform",
+        "ROPS",
+        "Seat",
+        "Dashboard",
+        "Front Wheels",
+        "Rear Wheels",
+        "BH75 Mount"
+
+    ]
+}

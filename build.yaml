@@ -1,0 +1,6 @@
+version: 0.1
+name: BUILD-015
+auto_commit: true
+auto_push: true
+packages:
+ - BUILD-015.seospkg

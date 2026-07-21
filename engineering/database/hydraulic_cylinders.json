@@ -1,0 +1,7 @@
+{
+    "cylinders":[
+        {"id":"HC001","bore":40,"rod":25,"stroke":200},
+        {"id":"HC002","bore":50,"rod":30,"stroke":300},
+        {"id":"HC003","bore":63,"rod":36,"stroke":450}
+    ]
+}

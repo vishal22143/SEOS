@@ -1,0 +1,11 @@
+{
+    "model":"BH75",
+    "assemblies":[
+        "Boom",
+        "Dipper",
+        "Bucket",
+        "Swing Frame",
+        "Stabilizer",
+        "Main Frame"
+    ]
+}

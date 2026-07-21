@@ -1,91 +1,42 @@
-Clear-Host
+param(
+    [Parameter(Mandatory = $true)]
+    [string]$Build
+)
 
-function Pause-SEOS {
-    Write-Host ""
-    Read-Host "Press ENTER to continue"
+$Root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$BuildFolder = Join-Path $Root "builds"
+$BuildFile = Join-Path $BuildFolder "$Build.ps1"
+
+Write-Host ""
+Write-Host "========================================"
+Write-Host " SHOURYA ENGINEERING OS (SEOS)"
+Write-Host "========================================"
+Write-Host ""
+
+# Check DFR
+
+$DFR = Join-Path $Root "docs\Design\DFR\MASTER_DFR.md"
+
+if(Test-Path $DFR)
+{
+    Write-Host "[OK] Design Freeze Register Found"
+}
+else
+{
+    Write-Host "[ERROR] Design Freeze Register Missing"
+    exit
 }
 
-while ($true) {
+# Check Build File
 
-    Clear-Host
-
-    Write-Host "====================================================="
-    Write-Host "        SHOURYA ENGINEERING OS (SEOS)"
-    Write-Host "              Developer Console v1.0"
-    Write-Host "====================================================="
+if(Test-Path $BuildFile)
+{
+    Write-Host "[OK] Executing $Build"
+    & $BuildFile
+}
+else
+{
     Write-Host ""
-    Write-Host "1. Repository Status"
-    Write-Host "2. Git Status"
-    Write-Host "3. Repository Tree"
-    Write-Host "4. Run Tests"
-    Write-Host "5. Install Requirements"
-    Write-Host "6. Run SEOS"
-    Write-Host "7. Git Add"
-    Write-Host "8. Git Commit"
-    Write-Host "9. Git Push"
-    Write-Host "10. Exit"
-    Write-Host ""
-
-    $choice = Read-Host "Select Option"
-
-    switch ($choice) {
-
-        "1" {
-            Get-Location
-            python --version
-            git status
-            Pause-SEOS
-        }
-
-        "2" {
-            git status
-            Pause-SEOS
-        }
-
-        "3" {
-            tree /F
-            Pause-SEOS
-        }
-
-        "4" {
-            pytest -q
-            Pause-SEOS
-        }
-
-        "5" {
-            pip install -r requirements.txt
-            Pause-SEOS
-        }
-
-        "6" {
-            python seos.py
-            Pause-SEOS
-        }
-
-        "7" {
-            git add .
-            git status
-            Pause-SEOS
-        }
-
-        "8" {
-            $msg = Read-Host "Commit Message"
-            git commit -m "$msg"
-            Pause-SEOS
-        }
-
-        "9" {
-            git push origin main
-            Pause-SEOS
-        }
-
-        "10" {
-            break
-        }
-
-        default {
-            Write-Host "Invalid Option"
-            Pause-SEOS
-        }
-    }
+    Write-Host "[ERROR] Build File Not Found"
+    Write-Host $BuildFile
 }

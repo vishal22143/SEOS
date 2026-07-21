@@ -1,0 +1,30 @@
+{
+    "attachment":"SEOS Universal Boom",
+    "model":"SUB-001",
+    "revision":"A",
+
+    "compatible_with":[
+
+        "Kubota B2441N",
+        "Kubota Future",
+        "Mahindra",
+        "Sonalika",
+        "John Deere",
+        "Custom"
+
+    ],
+
+    "configuration":{
+
+        "boom":"Variable",
+
+        "dipper":"Variable",
+
+        "bucket":"Interchangeable",
+
+        "mount":"Universal",
+
+        "hydraulics":"Quick Connect"
+
+    }
+}
