@@ -1,10 +1,42 @@
-{
-    "version":"1.0",
-    "materials":[
-        {"code":"MS101","name":"Mild Steel IS2062","density":7850},
-        {"code":"EN8","name":"EN8 Steel","density":7850},
-        {"code":"EN24","name":"EN24 Alloy Steel","density":7850},
-        {"code":"SS304","name":"Stainless Steel 304","density":8000},
-        {"code":"CI25","name":"Cast Iron FG250","density":7200}
-    ]
-}
+[
+ {
+   "id":"MAT-0001",
+   "name":"IS2062 E250",
+   "type":"Steel",
+   "density":7850,
+   "yield_strength_mpa":250,
+   "ultimate_strength_mpa":410
+ },
+ {
+   "id":"MAT-0002",
+   "name":"EN8",
+   "type":"Steel",
+   "density":7850,
+   "yield_strength_mpa":465,
+   "ultimate_strength_mpa":700
+ },
+ {
+   "id":"MAT-0003",
+   "name":"EN24",
+   "type":"Alloy Steel",
+   "density":7850,
+   "yield_strength_mpa":680,
+   "ultimate_strength_mpa":850
+ },
+ {
+   "id":"MAT-0004",
+   "name":"Hardox 450",
+   "type":"Wear Plate",
+   "density":7850,
+   "yield_strength_mpa":1200,
+   "ultimate_strength_mpa":1400
+ },
+ {
+   "id":"MAT-0005",
+   "name":"Aluminium 6061-T6",
+   "type":"Aluminium",
+   "density":2700,
+   "yield_strength_mpa":276,
+   "ultimate_strength_mpa":310
+ }
+]
